@@ -1,0 +1,13 @@
+QT.widgets_private.VERSION = 6.4.2
+QT.widgets_private.name = QtWidgets
+QT.widgets_private.module =
+QT.widgets_private.libs = $$QT_MODULE_LIB_BASE
+QT.widgets_private.includes = $$QT_MODULE_INCLUDE_BASE/QtWidgets/6.4.2 $$QT_MODULE_INCLUDE_BASE/QtWidgets/6.4.2/QtWidgets
+QT.widgets_private.frameworks = 
+QT.widgets_private.depends = core_private gui_private widgets
+QT.widgets_private.uses = 
+QT.widgets_private.module_config = v2 internal_module
+QT.widgets_private.enabled_features = gtk3 style-fusion style-windows effects widgettextcontrol
+QT.widgets_private.disabled_features = style-mac style-windowsvista style-android
+QMAKE_INCDIR_GTK3 = /usr/lib/x86_64-linux-gnu/dbus-1.0/include /usr/lib/x86_64-linux-gnu/glib-2.0/include
+QMAKE_LIBS_GTK3 = -lglib-2.0 -lgobject-2.0 -lgio-2.0 -lgdk_pixbuf-2.0 -lcairo -lcairo-gobject -latk-1.0 -lharfbuzz -lpango-1.0 -lpangocairo-1.0 -lgdk-3 -lgtk-3
