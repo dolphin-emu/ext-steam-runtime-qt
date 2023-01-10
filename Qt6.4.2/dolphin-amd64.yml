@@ -1,0 +1,88 @@
+release: 6.4.2
+platform: linux-g++
+name: dolphin.steamrt.amd64
+
+compiler:
+    name: gcc
+
+configure:
+    additional_parameters: -no-opengl -qt-pcre
+    nomake:
+        - examples
+        - tests
+        - tools
+    skip:
+        - qt3d
+        - qt5compat
+        - qtactiveqt
+        - qtandroidextras
+        - qtcharts
+        - qtcoap
+        - qtconnectivity
+        - qtdatavis3d
+        - qtdeclarative
+        - qtdoc
+        - qtgamepad
+        - qtgraphicaleffects
+        - qthttpserver
+        - qtjsonrpc
+        - qtlanguageserver
+        - qtlocation
+        - qtlottie
+        - qtmqtt
+        - qtmultimedia
+        - qtnetworkauth
+        - qtopcua
+        - qtpositioning
+        - qtpurchasing
+        - qtquick3d
+        - qtquick3dphysics
+        - qtquickcontrols
+        - qtquicktimeline
+        - qtremoteobjects
+        - qtscript
+        - qtscxml
+        - qtsensors
+        - qtserialbus
+        - qtserialport
+        - qtshadertools
+        - qtspeech
+        - qtsvg
+        - qttools
+        - qttranslations 
+        - qtvirtualkeyboard
+        - qtwebchannel
+        - qtwebengine
+        - qtwebsockets
+        - qtwebview
+        - qtxmlpatterns
+    feature:
+        concurrent: false
+        dbus: false
+        imageformat_bmp: false
+        network: false
+        printsupport: false
+        qmake: false
+        sql: false
+        testlib: false
+        textmarkdownreader: false
+        textmarkdownwriter: false
+        textodfwriter: false
+        tiff: false
+        webp: false
+
+postprocess:
+    delete:
+        - doc
+        - include/QtXml
+        - lib/cmake/Qt6Xml
+        - modules/Xml.json
+    delete_regex:
+        - bin\\android.*
+        - bin\\Qt6Xml.*
+        - bin\\.*\.cmake
+        - bin\\.*\.conf
+        - bin\\.*\.pl
+        - lib\\metatypes\\qt6xml_.*\.json
+        - lib\\Qt6Xml.*
+        - .*\.prl
